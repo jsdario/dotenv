@@ -1,7 +1,7 @@
 # My .gitconfig
 
 * Large File Support
-* Use `git pr` to create a Pull Request directly on github
+* Use `git pr` to [create a Pull Request directly on github](https://github.com/jd/git-pull-request)
 * Autotrack branches so `git push` and `git pull` work with the matching remote branch out-of-the-box
 * Colors
 * Works well with zsh
@@ -13,9 +13,9 @@
   * lg = log # with colors
   * pl = pull --rebase
   * undo = reset --soft HEAD^ 
-  * `undo --hard will stash dirty directory after a soft undo
+  * `undo --hard` will stash dirty directory after a soft undo
   * sm = submodule
-  r = pull-request --target-branch master
+  * pr = pull-request --target-branch master
 * No fast forward on merges by default (always create a merge commit, normally I decide wether or not get rid of it manually)
 
 
