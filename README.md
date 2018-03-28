@@ -1,7 +1,7 @@
 # My .gitconfig
 
 * Large File Support
-* Use `git pr` to [create a Pull Request directly on github](https://github.com/jd/git-pull-request)
+* Use `git pr` to [create a Pull Request directly on github](https://github.com/jd/git-pull-request). Install it with pip3 to avoid headaches. Installing pip3 on OSX will be a headache anyway.
 * Autotrack branches so `git push` and `git pull` work with the matching remote branch out-of-the-box
 * Colors
 * Works well with zsh
