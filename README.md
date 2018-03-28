@@ -16,7 +16,7 @@
   * `undo --hard` will stash dirty directory after a soft undo
   * sm = submodule
   * pr = pull-request --target-branch master
-* No fast forward on merges by default (always create a merge commit, normally I decide wether or not get rid of it manually)
+* Fast forward on merges by default
 
 
 ```
