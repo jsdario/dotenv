@@ -47,7 +47,7 @@
   pr = pull-request --target-branch master
   undo = reset --soft HEAD^
 [merge]
-        ff = false
+        ff = true
 [pull]
   default = current
 ```
