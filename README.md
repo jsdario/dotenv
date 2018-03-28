@@ -42,7 +42,6 @@
     graph = log --graph --all '--pretty=format:%Cred%h%Creset %ad | [%C(bold blue)%an%Creset] %Cgreen%d%Creset %s' --date=iso
   rem = remote 
   pl = pull --rebase
-  next = add -A && git rebase --continue
   sm = submodule
   pr = pull-request --target-branch master
   undo = reset --soft HEAD^
