@@ -56,3 +56,15 @@ pip3 install git-pull-request
 [pull]
   default = current
 ```
+
+## To have [fancy diffs](https://github.com/so-fancy/diff-so-fancy):
+```
+npm i -g diff-so-fancy
+git diff --color | diff-so-fancy | less --tabs=4 -RFX
+```
+
+### Setup
+```
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+```
+
