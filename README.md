@@ -1,7 +1,8 @@
 # My .gitconfig
 
 * Large File Support
-* Use `git pr` to [create a Pull Request directly on github](https://github.com/jd/git-pull-request).
+* Use `git pr` to [create a Pull Request directly on github](https://github.com/jd/git-pull-request). If 2FA is activated you must [create a token](https://github.com/settings/tokens) and use it as password.
+
 ```
 brew install python3
 pip3 install git-pull-request
