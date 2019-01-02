@@ -1,0 +1,29 @@
+{
+	"color_scheme": "Packages/Naomi/Candyman.tmTheme",
+	"draw_white_space": "all",
+	"folder_exclude_patterns":
+	[
+		".gradle",
+		".git",
+		"lcov-report",
+		"build/intermediates",
+		"build/outputs",
+		"*.framework",
+		"*.noindex",
+		".cache/nyc",
+		".nyc_output",
+		".idea",
+		"coverage"
+	],
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"hot_exit": false,
+	"rulers": [80],
+  	"remember_open_files": false,
+	"tab_size": 2,
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
