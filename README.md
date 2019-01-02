@@ -69,3 +69,9 @@ git diff --color | diff-so-fancy | less --tabs=4 -RFX
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
 
+# Sublime Packages
+- [Naomi](https://packagecontrol.io/packages/Naomi)
+- [FileIcons](https://packagecontrol.io/packages/FileIcons)
+- [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements)
+- [SyncedSideBar](https://packagecontrol.io/packages/SyncedSideBar)
+- [GitHub Flavored Markdown Preview](https://packagecontrol.io/packages/GitHub%20Flavored%20Markdown%20Preview)
