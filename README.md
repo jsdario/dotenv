@@ -19,6 +19,8 @@ pip3 install git-pull-request
   * br = branch
   * lg = log # with colors
   * pl = pull --rebase
+  * rem = remote
+  * ls = rem -v # will list all remotes
   * undo = reset --soft HEAD^ 
   * `undo --hard` will stash dirty directory after a soft undo
   * sm = submodule
@@ -41,13 +43,14 @@ pip3 install git-pull-request
 [push]
   default = current
 [alias]
-    ci = commit
-    co = checkout
-    st = status
-    br = branch
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
-    graph = log --graph --all '--pretty=format:%Cred%h%Creset %ad | [%C(bold blue)%an%Creset] %Cgreen%d%Creset %s' --date=iso
-  rem = remote 
+  ci = commit
+  co = checkout
+  st = status
+  br = branch
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+  graph = log --graph --all '--pretty=format:%Cred%h%Creset %ad | [%C(bold blue)%an%Creset] %Cgreen%d%Creset %s' --date=iso
+  rem = remote
+  ls = rem -v
   pl = pull --rebase
   sm = submodule
   pr = pull-request --target-branch master
