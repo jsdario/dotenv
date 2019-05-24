@@ -72,6 +72,10 @@ git diff --color | diff-so-fancy | less --tabs=4 -RFX
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
 
+## To have [fancy cat](https://mobile.twitter.com/mgechev/status/1131626715267178496)
+pip3 install pygments
+alias ccat='pygmentize -f terminal256 -O style=native -g'
+
 # Sublime Packages
 - [Naomi](https://packagecontrol.io/packages/Naomi)
 - [FileIcons](https://packagecontrol.io/packages/FileIcons)
