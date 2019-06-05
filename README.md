@@ -17,6 +17,7 @@ pip3 install git-pull-request
 * Aliases:
   * ci = commit
   * co = checkout
+    * Use the `--force | -f` switch to discard local changes
   * st = status
   * br = branch
   * lg = log # with colors
