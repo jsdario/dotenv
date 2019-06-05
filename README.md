@@ -1,5 +1,7 @@
 # My .gitconfig
 
+> To open git config files just type `git config -e --global`
+
 * Large File Support
 * Use `git pr` to [create a Pull Request directly on github](https://github.com/jd/git-pull-request). If 2FA is activated you must [create a token](https://github.com/settings/tokens) and use it as password.
 
@@ -20,12 +22,15 @@ pip3 install git-pull-request
   * lg = log # with colors
   * pl = pull --rebase
   * rem = remote
-  * ls = rem -v # will list all remotes
-  * undo = reset --soft HEAD^ 
-  * `undo --hard` will stash dirty directory after a soft undo
+  * `git ls` Will list all remotes with their URLs
+  * `git undo` will uncommit the last commit
+    * Use `--hard` to stash dirty directory after a soft undo
   * sm = submodule
   * pr = pull-request --target-branch master
-* Fast forward on merges by default
+  * Fast forward on merges by default
+  * `git conflicts` shows conflicting files on a merge or rebase
+  * `git compare` shows the diff from the current branch w/ master
+    * use `--name-only` if you don't care for the particular lines
 
 
 ```
@@ -55,6 +60,9 @@ pip3 install git-pull-request
   sm = submodule
   pr = pull-request --target-branch master
   undo = reset --soft HEAD^
+  conflicts = !git ls-files -u | cut -f 2 | sort -u
+  compare = !git diff master..."$(git symbolic-ref --short HEAD)"
+  
 [merge]
         ff = true
 [pull]
