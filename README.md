@@ -1,4 +1,16 @@
-# My .gitconfig
+# My Developer Environment
+
+## Oh My Zsh
+```
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+### Zsh improvements
+* Frequency-based cd https://github.com/rupa/z
+* A plugin I developed myself https://github.com/jsdario/vpn-hint
+* Syntax Highlight `cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git` + `source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh`
+
+## Git Configuration
 
 > To open git config files just type `git config -e --global`
 
@@ -85,7 +97,7 @@ git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 pip3 install pygments
 alias ccat='pygmentize -f terminal256 -O style=native -g'
 
-# Sublime Packages
+## Sublime Packages
 - [Naomi](https://packagecontrol.io/packages/Naomi)
 - [FileIcons](https://packagecontrol.io/packages/FileIcons)
 - [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements)
