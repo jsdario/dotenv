@@ -82,13 +82,19 @@ pip3 install git-pull-request
   default = current
 ```
 
+## Nano syntax highlight
+```
+brew install nano
+/bin/ls /usr/local/share/nano/*.nanorc | xargs -I {} echo 'include "{}"' >> ~/.nanorc
+```
+
 ## To have [fancy diffs](https://github.com/so-fancy/diff-so-fancy):
 ```
 npm i -g diff-so-fancy
 git diff --color | diff-so-fancy | less --tabs=4 -RFX
 ```
 
-### Setup
+And to setup:
 ```
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
