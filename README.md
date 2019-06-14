@@ -84,7 +84,7 @@ pip3 install git-pull-request
 
 ## Nano syntax highlight
 ```
-brew install nano
+brew install nano # Upgrade over OSX default nano version
 /bin/ls /usr/local/share/nano/*.nanorc | xargs -I {} echo 'include "{}"' >> ~/.nanorc
 ```
 
