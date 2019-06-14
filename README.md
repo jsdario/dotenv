@@ -82,12 +82,6 @@ pip3 install git-pull-request
   default = current
 ```
 
-## Nano syntax highlight
-```
-brew install nano # Upgrade over OSX default nano version
-/bin/ls /usr/local/share/nano/*.nanorc | xargs -I {} echo 'include "{}"' >> ~/.nanorc
-```
-
 ## To have [fancy diffs](https://github.com/so-fancy/diff-so-fancy):
 ```
 npm i -g diff-so-fancy
