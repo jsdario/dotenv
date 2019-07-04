@@ -1,5 +1,18 @@
 # My Developer Environment
 
+Begin with Homebrew or zsh depending on what you are looking for. Use `mas` to install the apps that you are missing and you will be good to go 🎉 Still looking to automate vscode and sublime-text plugin installation
+
+## Install Homebrew
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+## Install missing apps
+```
+brew install mas
+mas lucky slack # Installs latest version on the Mac App Store
+```
+
 ## Oh My Zsh
 ```
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
