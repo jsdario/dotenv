@@ -1,0 +1,24 @@
+// Mimics the "Open file / Go to class" from IntelliJ
+[
+    {
+        "key": "shift+alt+cmd+o",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "shift+cmd+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.files.openFileFolder"
+    },
+    {
+        "key": "cmd+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.files.openLocalFileFolder",
+        "when": "remoteFileDialogVisible"
+    }
+]
