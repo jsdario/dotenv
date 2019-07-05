@@ -112,6 +112,12 @@ pip3 install pygments
 alias ccat='pygmentize -f terminal256 -O style=native -g'
 ```
 
+## The Silver Searcher
+
+```
+brew install the_silver_searcher
+```
+
 ## Sublime Packages
 - [Naomi](https://packagecontrol.io/packages/Naomi)
 - [FileIcons](https://packagecontrol.io/packages/FileIcons)
