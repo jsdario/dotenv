@@ -13,6 +13,8 @@ brew install mas
 mas lucky slack # Installs latest version on the Mac App Store
 ```
 
+I use [Itsycal](https://www.mowglii.com/itsycal/) as a calendar Mac OS extension which is nice <3
+
 ## Oh My Zsh
 ```
 $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
