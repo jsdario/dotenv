@@ -59,7 +59,7 @@ pip3 install git-pull-request
   * `git conflicts` shows conflicting files on a merge or rebase
   * `git compare` shows the diff from the current branch w/ master
     * use `--name-only` if you don't care for the particular lines
-
+  * amend = commit -a --amend --no-edit
 
 ```
 [user]
@@ -90,7 +90,8 @@ pip3 install git-pull-request
   undo = reset --soft HEAD^
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   compare = !git diff master..."$(git symbolic-ref --short HEAD)"
-  
+  amend = commit -a --amend --no-edit
+
 [merge]
         ff = true
 [pull]
