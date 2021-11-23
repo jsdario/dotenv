@@ -60,6 +60,8 @@ pip3 install git-pull-request
   * `git compare` shows the diff from the current branch w/ master
     * use `--name-only` if you don't care for the particular lines
   * amend = commit -a --amend --no-edit
+  * cp = cherry-pick
+  * unstash = stash pop
 
 ```
 [user]
