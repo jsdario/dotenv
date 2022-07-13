@@ -43,8 +43,8 @@ To open git config files just type `git config -e --global`
 
 ```
 [user]
-  name = alias
-  email = alias@******.com
+  name = jriverarubio
+  email = jriverarubio@apple.com
 [core]
   editor = nano
   excludesfile = /Users/jdario/.gitignore_global
@@ -74,9 +74,9 @@ To open git config files just type `git config -e --global`
   amend = commit -a --amend --no-edit
   unstash = stash pop
 [branch]
-        autoSetupMerge = always
+  autoSetupMerge = always
 [merge]
-        ff = true
+  ff = true
 ```
 
 Use git pr to create a [Pull Request directly on github](https://github.com/jd/git-pull-request). If 2FA is activated you must [create a token](https://github.com/settings/tokens) and use it as password
