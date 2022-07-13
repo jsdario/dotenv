@@ -2,6 +2,17 @@
 
 Begin with Homebrew or zsh depending on what you are looking for. Use `mas` to install the apps that you are missing and you will be good to go 🎉 Still looking to automate vscode and sublime-text plugin installation
 
+## Oh My Zsh
+```
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+## Use `nano` instead of `vim`
+I'm not apologetic. Never bothered to learn vim.
+```
+echo 'export EDITOR=nano' >> ~/.zshrc
+```
+
 ## Install Homebrew
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -9,16 +20,17 @@ Begin with Homebrew or zsh depending on what you are looking for. Use `mas` to i
 
 ## Install missing apps
 ```
+# MacOS stats for the menu bar
+brew install --cask stats
+
+# Command line App Store installer
 brew install mas
-mas lucky slack # Installs latest version on the Mac App Store
+mas lucky slack
+mas lucky 1Password
 ```
 
 I use [Itsycal](https://www.mowglii.com/itsycal/) as a calendar Mac OS extension which is nice <3
-
-## Oh My Zsh
-```
-$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-```
+Link to [mas-cli/mas](https://github.com/mas-cli/mas) App Store installer
 
 ### Zsh improvements
 * Frequency-based cd https://github.com/rupa/z
@@ -27,46 +39,12 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 
 ## Git Configuration
 
-> To open git config files just type `git config -e --global`
-
-* Large File Support
-* Use `git pr` to [create a Pull Request directly on github](https://github.com/jd/git-pull-request). If 2FA is activated you must [create a token](https://github.com/settings/tokens) and use it as password.
-
-```
-brew install python3
-pip3 install git-pull-request
-# You may need to create a .netrc file with credentials
-```
-
-* Autotrack branches so `git push` and `git pull` work with the matching remote branch out-of-the-box
-* Colors
-* Works well with zsh
-* Aliases:
-  * ci = commit
-  * co = checkout
-    * Use the `--force | -f` switch to discard local changes
-  * st = status
-  * br = branch
-  * lg = log # with colors
-  * pl = pull --rebase
-  * rem = remote
-  * `git ls` Will list all remotes with their URLs
-  * `git undo` will uncommit the last commit
-    * Use `--hard` to stash dirty directory after a soft undo
-  * sm = submodule
-  * pr = pull-request --target-branch master
-  * Fast forward on merges by default
-  * `git conflicts` shows conflicting files on a merge or rebase
-  * `git compare` shows the diff from the current branch w/ master
-    * use `--name-only` if you don't care for the particular lines
-  * amend = commit -a --amend --no-edit
-  * cp = cherry-pick
-  * unstash = stash pop
+To open git config files just type `git config -e --global`
 
 ```
 [user]
-  name = jsdario
-  email = jesus@netbeast.co
+  name = alias
+  email = alias@******.com
 [core]
   editor = nano
   excludesfile = /Users/jdario/.gitignore_global
@@ -80,6 +58,7 @@ pip3 install git-pull-request
 [alias]
   ci = commit
   co = checkout
+  cp = cherry-pick
   st = status
   br = branch
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
@@ -93,11 +72,19 @@ pip3 install git-pull-request
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   compare = !git diff master..."$(git symbolic-ref --short HEAD)"
   amend = commit -a --amend --no-edit
-
+  unstash = stash pop
+[branch]
+        autoSetupMerge = always
 [merge]
         ff = true
-[pull]
-  default = current
+```
+
+Use git pr to create a [Pull Request directly on github](https://github.com/jd/git-pull-request). If 2FA is activated you must [create a token](https://github.com/settings/tokens) and use it as password
+
+```
+brew install python3
+pip3 install git-pull-request
+# You may need to create a .netrc file with credentials
 ```
 
 ## To have [fancy diffs](https://github.com/so-fancy/diff-so-fancy):
