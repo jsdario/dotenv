@@ -27,6 +27,8 @@ brew install --cask stats
 brew install mas
 mas lucky slack
 mas lucky 1Password
+mas lucky amphetamine
+mas lucky WhatsApp
 ```
 
 I use [Itsycal](https://www.mowglii.com/itsycal/) as a calendar Mac OS extension which is nice <3
