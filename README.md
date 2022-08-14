@@ -27,8 +27,8 @@ brew install --cask stats
 brew install mas
 mas lucky slack
 mas lucky 1Password
-mas lucky amphetamine
 mas lucky WhatsApp
+mas lucky amphetamine # lately I just type `caffeinate -d` on the terminal
 ```
 
 I use [Itsycal](https://www.mowglii.com/itsycal/) as a calendar Mac OS extension which is nice <3
@@ -110,6 +110,16 @@ alias ccat='pygmentize -f terminal256 -O style=native -g'
 
 ```
 brew install the_silver_searcher
+```
+
+# Editors
+
+## Sublime Merge
+Easier and more confident merges https://www.sublimemerge.com/download
+
+Link the binary to a folder in $PATH so you can run it from the command line
+```
+ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 ```
 
 ## Sublime Packages
