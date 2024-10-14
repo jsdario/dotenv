@@ -45,8 +45,8 @@ To open git config files just type `git config -e --global`
 
 ```
 [user]
-  name = jriverarubio
-  email = jriverarubio@apple.com
+  name = jsdario
+  email = personal@email.com
 [core]
   editor = nano
   excludesfile = /Users/jdario/.gitignore_global
