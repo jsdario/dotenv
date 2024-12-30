@@ -4,7 +4,7 @@ Begin with Homebrew or zsh depending on what you are looking for. Use `mas` to i
 
 ## Oh My Zsh
 ```
-$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ssh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 ## Use `nano` instead of `vim`
@@ -15,7 +15,7 @@ echo 'export EDITOR=nano' >> ~/.zshrc
 
 ## Install Homebrew
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Install missing apps
