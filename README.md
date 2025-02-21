@@ -18,6 +18,11 @@ echo 'export EDITOR=nano' >> ~/.zshrc
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+```
+# Puts homebrew binaries at the front of the system PATH.
+export PATH=$(brew --prefix)/bin:$PATH
+```
+
 ## Install missing apps
 ```
 # MacOS stats for the menu bar
