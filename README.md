@@ -119,10 +119,14 @@ brew install the_silver_searcher
 
 # Editors
 
-## Sublime Merge
-Easier and more confident merges https://www.sublimemerge.com/download
+## Sublime
+https://www.sublimetext.com and https://www.sublimemerge.com/download
+```
+brew install --cask sublime-merge
+brew install --cask sublime-text
+```
 
-Link the binary to a folder in $PATH so you can run it from the command line
+For manual installs, link the binary to a folder in $PATH so you can run it from the command line
 ```
 ln -s "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 ```
