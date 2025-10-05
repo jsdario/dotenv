@@ -68,6 +68,8 @@ To open git config files just type `git config -e --global`
   cp = cherry-pick
   st = status
   br = branch --sort=-committerdate --format='%(HEAD) %(refname:short)  %(committerdate:relative)'
+  stale = "!git for-each-ref --sort=committerdate --format='%(refname:short)  %(committerdate:relative)' refs/heads/ | awk -v d=\"$(date -v-1m +%s)\" '{cmd=\"git log -1 --format=%ct \"$1\"\"; cmd | getline t; close(cmd); if(t < d) print $0}'"
+  stale:drop = "!git for-each-ref --sort=committerdate --format='%(refname:short)' refs/heads/ | awk -v d=\"$(date -v-1m +%s)\" '{cmd=\"git log -1 --format=%ct \"$1\"\"; cmd | getline t; close(cmd); if(t < d) print $1}' | xargs -r -n 1 git branch -d"
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
   graph = log --graph --all '--pretty=format:%Cred%h%Creset %ad | [%C(bold blue)%an%Creset] %Cgreen%d%Creset %s' --date=iso
   rem = remote
