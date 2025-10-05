@@ -67,7 +67,7 @@ To open git config files just type `git config -e --global`
   co = checkout
   cp = cherry-pick
   st = status
-  br = git branch --sort=-committerdate --format='%(HEAD) %(refname:short)  %(committerdate:relative)'
+  br = branch --sort=-committerdate --format='%(HEAD) %(refname:short)  %(committerdate:relative)'
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
   graph = log --graph --all '--pretty=format:%Cred%h%Creset %ad | [%C(bold blue)%an%Creset] %Cgreen%d%Creset %s' --date=iso
   rem = remote
