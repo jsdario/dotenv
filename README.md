@@ -81,7 +81,11 @@ To open git config files just type `git config -e --global`
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   compare = !git diff master..."$(git symbolic-ref --short HEAD)"
   amend = commit -a --amend --no-edit
-  unstash = stash pop
+  wt = "!f() { \
+  repo=$(basename \"$(git rev-parse --show-toplevel)\"); \
+  branch=\"$1\"; \
+  git worktree add \"../${repo}-${branch}\" \"$branch\"; \
+  }; f"
 [branch]
   autoSetupMerge = always
 [merge]
