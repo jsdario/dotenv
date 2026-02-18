@@ -82,9 +82,9 @@ To open git config files just type `git config -e --global`
   compare = !git diff master..."$(git symbolic-ref --short HEAD)"
   amend = commit -a --amend --no-edit
   wt = "!f() { \
-  repo=$(basename \"$(git rev-parse --show-toplevel)\"); \
-  branch=\"$1\"; \
-  git worktree add \"../${repo}-${branch}\" \"$branch\"; \
+    repo=$(basename \"$(git rev-parse --show-toplevel)\"); \
+    branch=\"$1\"; \
+    git worktree add -b \"$branch\" \"../${repo}-${branch}\" HEAD; \
   }; f"
 [branch]
   autoSetupMerge = always
