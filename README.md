@@ -44,6 +44,37 @@ Link to [mas-cli/mas](https://github.com/mas-cli/mas) App Store installer
 * A plugin I developed myself https://github.com/jsdario/vpn-hint
 * Syntax Highlight `cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git` + `source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh`
 
+## Git Hooks
+
+The `hooks/` directory contains global git hooks. To install them:
+
+```bash
+git config --global core.hooksPath ~/Developer/dotenv/hooks
+```
+
+### `pre-commit` — no whitespace-only commits
+
+Inspects each staged file individually. If a file's staged changes are purely whitespace, it auto-unstages that file and prints a notice. The commit proceeds with only meaningful changes. If all staged files were whitespace-only, the commit is aborted entirely.
+
+```bash
+# Strip whitespace and keep only meaningful changes
+git strip-whitespace
+
+# Or discard everything
+git reset && git restore .
+```
+
+The `git strip-whitespace` alias (see Git Configuration below) stages only non-whitespace diffs and discards the rest:
+
+```bash
+git config --global alias.strip-whitespace \
+  '!git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero - && git restore .'
+```
+
+> **Warning:** `git strip-whitespace` runs `git restore .` which discards all unstaged changes. Stage or stash other work first.
+
+---
+
 ## Git Configuration
 
 To open git config files just type `git config -e --global`

@@ -1,0 +1,34 @@
+#!/bin/sh
+# Auto-unstage files with whitespace-only changes before commit
+
+# Nothing staged — let git handle it
+if git diff --cached --quiet; then
+    exit 0
+fi
+
+UNSTAGED_FILES=""
+OLD_IFS="$IFS"
+IFS='
+'
+for file in $(git diff --cached --name-only); do
+    if ! git diff --cached --diff-filter=D --name-only | grep -qxF "$file"; then
+        file_meaningful=$(git diff --cached -U0 -w --no-color -- "$file" 2>/dev/null)
+        if [ -z "$file_meaningful" ]; then
+            git reset -q HEAD -- "$file" 2>/dev/null
+            UNSTAGED_FILES="$UNSTAGED_FILES  $file\n"
+        fi
+    fi
+done
+IFS="$OLD_IFS"
+
+if [ -n "$UNSTAGED_FILES" ]; then
+    echo "pre-commit: Auto-unstaged files with whitespace-only changes:"
+    printf '%b' "$UNSTAGED_FILES"
+    echo ""
+fi
+
+if git diff --cached --quiet; then
+    echo "error: No meaningful changes remain after stripping whitespace-only files. Aborting commit."
+    echo "  git restore ."
+    exit 1
+fi
